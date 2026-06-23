@@ -18,7 +18,7 @@ API_KEY = st.secrets["GEMINI_API_KEY"]
 client = genai.Client(api_key=API_KEY)
 
 # ใช้โมเดลรุ่น Flash เพื่อความรวดเร็วและใช้โควตาฟรีได้เต็มที่
-MODEL_ID = 'gemini-3.5-flash'
+MODEL_ID = 'gemini-2.0-flash'
 
 # ==========================================
 # 2. ส่วนรับข้อมูลจากผู้ใช้งาน (รูปภาพ + ข้อความ)
