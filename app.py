@@ -10,7 +10,9 @@ st.set_page_config(page_title="AI Safety Consultant", layout="centered")
 st.title("PEA ระบบ AI แนะนำความปลอดภัยงานเกี่ยวกับไฟฟ้า")
 
 # ใส่ API Key ของคุณตรงนี้ (ใช้ API Key ใหม่ของคุณ)
-API_KEY = "API Key"
+# เป็นการดึงจากระบบ Secrets ของ Streamlit Cloud เพื่อความปลอดภัยขั้นสูง
+import os
+API_KEY = st.secrets["GEMINI_API_KEY"]
 
 # เรียกใช้ Client
 client = genai.Client(api_key=API_KEY)
